@@ -7,25 +7,25 @@ export function PortfolioSection() {
     {
       title: "Nifty Educate",
       description: "Learning materials contain various themes for preschool, kindergarten, and early elementary school children",
-      image: "/images/nifty.png",
+      image: "/images/nifty.jpeg",
       demoUrl: "https://niftyforkids.com",
     },
     {
       title: "Javabica",
       description: "Javabica is Indonesia's leading coffee producer. bringing premium coffee whereever you are",
-      image: "/images/javabica.png",
+      image: "/images/javabica.jpeg",
       demoUrl: "https://javabica.com",
     },
     {
       title: "Attention",
       description: "An Event Ecosystem Platform that simplifies event activities through seamless connections and collaboration.",
-      image: "/images/attention.png",
+      image: "/images/attention.jpeg",
       demoUrl: "https://attention.id",
     },
     {
       title: "Inilah.com",
       description: "online media that is committed to presenting exclusive, credible information that is in the public interest",
-      image: "/images/inilah.png",
+      image: "/images/inilah.jpeg",
       demoUrl: "https://inilah.com",
     },
   ]
