@@ -6,26 +6,26 @@ export function PortfolioSection() {
   const portfolioProjects = [
     {
       title: "Nifty Educate",
-      description: "Modern shopping experience with real-time inventory management",
-      image: "/placeholder.svg?height=400&width=600",
+      description: "Learning materials contain various themes for preschool, kindergarten, and early elementary school children",
+      image: "/images/nifty.png",
       demoUrl: "https://niftyforkids.com",
     },
     {
       title: "Javabica",
-      description: "Collaborative workspace for team productivity and project tracking",
-      image: "/placeholder.svg?height=400&width=600",
+      description: "Javabica is Indonesia's leading coffee producer. bringing premium coffee whereever you are",
+      image: "/images/javabica.png",
       demoUrl: "https://javabica.com",
     },
     {
       title: "Attention",
-      description: "Intelligent tool for creating and optimizing digital content",
-      image: "/placeholder.svg?height=400&width=600",
+      description: "An Event Ecosystem Platform that simplifies event activities through seamless connections and collaboration.",
+      image: "/images/attention.png",
       demoUrl: "https://attention.id",
     },
     {
       title: "Inilah.com",
-      description: "Real-time data visualization and business intelligence",
-      image: "/placeholder.svg?height=400&width=600",
+      description: "online media that is committed to presenting exclusive, credible information that is in the public interest",
+      image: "/images/inilah.png",
       demoUrl: "https://inilah.com",
     },
   ]
