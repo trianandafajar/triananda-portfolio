@@ -1,110 +1,71 @@
-"use client"
-
 import { FolderOpen } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
-
-const rotatingTexts = [
-  "AI-powered web apps",
-  "SaaS platforms",
-  "scalable full-stack systems",
-]
+import { RotatingText } from "@/components/rotating-text"
 
 export function HeroSection() {
-  const [index, setIndex] = useState(0)
-  const [visible, setVisible] = useState(true)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisible(false)
-
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % rotatingTexts.length)
-        setVisible(true)
-      }, 200)
-
-    }, 2500)
-
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <section className="container mx-auto px-4 py-16 md:py-20 mt-28">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-
-        {/* IMAGE */}
-        <div className="flex justify-center md:justify-end order-1 md:order-2">
-          <div className="relative w-full max-w-[320px] md:max-w-[425px] aspect-square bg-[#FDB927] border-4 border-black rounded-3xl overflow-hidden shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+    <section className="container mx-auto mt-28 px-4 py-16 md:py-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-2">
+        <div className="order-1 flex justify-center md:order-2 md:justify-end">
+          <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-3xl border-4 border-black bg-[#FDB927] shadow-[8px_8px_0px_rgba(0,0,0,1)] md:max-w-[425px]">
             <Image
               src="/images/profil.png"
               alt="Triananda profile"
               fill
-              className="object-cover"
               priority
+              sizes="(max-width: 768px) 320px, 425px"
+              className="object-cover"
             />
           </div>
         </div>
 
-        {/* TEXT */}
-        <div className="space-y-7 order-2 md:order-1">
-
-          <h1 className="font-bold leading-[1] tracking-tight text-[clamp(36px,5vw,56px)]">
-
-            I’m Triananda, a Full Stack SaaS Developer
-            <span className="block mt-2 font-semibold text-[clamp(28px,3.2vw,32px)]">
-              specializing in{" "}
-              <span
-                className={`inline-block transition-opacity duration-300 underline ${
-                  visible ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                {rotatingTexts[index]}
-              </span>
+        <div className="order-2 space-y-7 md:order-1">
+          <h1 className="text-[clamp(36px,5vw,56px)] font-bold leading-[1] tracking-tight">
+            I'm Triananda, a Full Stack SaaS Developer
+            <span className="mt-2 block text-[clamp(28px,3.2vw,32px)] font-semibold">
+              specializing in <RotatingText />
             </span>
-
           </h1>
 
-          <p className="text-[#393939] text-[16px] md:text-[18px] font-medium leading-7 max-w-xl">
+          <p className="max-w-xl text-[16px] font-medium leading-7 text-[#393939] md:text-[18px]">
             With 5+ years of experience and 60+ completed projects for clients
             across various countries.
           </p>
 
-          {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2">
-
+          <div className="flex flex-wrap gap-4 pt-2 sm:flex-row">
             <Link
               href="#portfolio"
               className="
-                bg-white flex items-center border-[3px] border-black rounded-lg
-                py-4 px-7 text-base md:text-lg font-semibold
-                transition-all duration-300 ease-out
-                hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]
+                flex items-center rounded-lg border-[3px] border-black bg-white
+                px-7 py-4 text-base font-semibold
+                transition-transform duration-200 ease-out motion-reduce:transition-none
+                hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]
                 active:scale-95
+                md:text-lg
               "
             >
-              <FolderOpen className="w-5 h-5 mr-2" />
+              <FolderOpen className="mr-2 h-5 w-5" />
               View portfolio
             </Link>
 
             <Link
               href="https://www.upwork.com/freelancers/trianandafajar"
               target="_blank"
+              rel="noopener noreferrer"
               className="
-                bg-white flex items-center border-[3px] border-black rounded-lg
-                py-4 px-7 text-base md:text-lg font-semibold
-                transition-all duration-300 ease-out
-                hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]
+                flex items-center rounded-lg border-[3px] border-black bg-white
+                px-7 py-4 text-base font-semibold
+                transition-transform duration-200 ease-out motion-reduce:transition-none
+                hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]
                 active:scale-95
+                md:text-lg
               "
             >
               Hire me
             </Link>
-
           </div>
-
         </div>
-
       </div>
     </section>
   )

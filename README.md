@@ -22,6 +22,16 @@ Continue building your app on:
 
 **[https://v0.app/chat/IKJ21kToIah](https://v0.app/chat/IKJ21kToIah)**
 
+## Local build stability (Windows)
+
+If `next build` fails with `EPERM ... .next\\trace`, close active Next.js dev servers first, then run:
+
+```powershell
+Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force
+Remove-Item -Recurse -Force .next -ErrorAction SilentlyContinue
+npm run build
+```
+
 ## How It Works
 
 1. Create and modify your project using [v0.app](https://v0.app)

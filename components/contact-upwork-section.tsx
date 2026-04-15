@@ -1,38 +1,29 @@
-"use client";
-
-import { ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react"
 
 export function ContactUpworkSection() {
   return (
     <section className="bg-black py-32" id="contact-upwork">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-[1.2]">
-          Let’s build your next product.
+      <div className="mx-auto max-w-6xl px-6 text-center">
+        <h2 className="mb-6 text-4xl font-bold leading-[1.2] text-white md:text-6xl">
+          Let's build your next product.
         </h2>
 
-        <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
+        <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-400">
           If you're looking for a reliable full-stack developer to help build,
           scale, or improve your web application, feel free to reach out. I'm
           available for new projects on Upwork.
         </p>
 
         <a
-          href="https://www.upwork.com/"
+          href="https://www.upwork.com/freelancers/trianandafajar"
           target="_blank"
-          className="
-            inline-flex items-center gap-3
-            bg-white text-black
-            px-8 py-4
-            rounded-xl
-            font-semibold
-            hover:bg-gray-200
-            transition
-          "
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 rounded-xl bg-white px-8 py-4 font-semibold text-black transition-colors duration-200 hover:bg-gray-200 motion-reduce:transition-none"
         >
           Hire Me on Upwork
-          <ExternalLink className="w-5 h-5" />
+          <ExternalLink className="h-5 w-5" />
         </a>
       </div>
     </section>
-  );
+  )
 }

@@ -1,8 +1,6 @@
-import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { PortfolioSection } from "@/components/portfolio"
-import { Footer } from "@/components/footer"
 import { ServicesSection } from "@/components/service-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { TestimonialSection } from "@/components/testimonial-section"
@@ -15,7 +13,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <PortfolioSection />
-      <ExperienceSection/>
+      <ExperienceSection />
       <TestimonialSection />
       <ContactUpworkSection />
     </>

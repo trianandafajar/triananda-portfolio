@@ -1,7 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import { Layers, Server, Brain, Code, Cpu } from "lucide-react";
+import { Layers, Server, Brain, Code, Cpu } from "lucide-react"
 
 const services = [
   {
@@ -39,99 +36,75 @@ const services = [
       "Backend systems optimized for scalability, performance and reliability.",
     stack: ["AWS", "Docker", "PostgreSQL"],
   },
-];
+]
 
-function ServiceCard({ service, index, hover }: any) {
-  const Icon = service.icon;
-
-  const isActive = hover === index;
-  const isDim = hover !== null && hover !== index;
-
+function ServiceCard({
+  icon: Icon,
+  title,
+  description,
+  stack,
+}: {
+  icon: typeof Layers
+  title: string
+  description: string
+  stack: string[]
+}) {
   return (
     <div
-      className={`
-      p-8 rounded-3xl bg-white
-      min-h-[330px]
-      border-4
-      transition-all duration-300
-
-      ${
-        isActive
-          ? "border-black scale-102 shadow-[16px_16px_0px_rgba(0,0,0,1)]"
-          : isDim
-            ? "border-black/50 scale-98 shadow-[1px_2px_0px_rgba(0,0,0,0.5)] opacity-90"
-            : "border-black shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-      }
-    `}
+      className="
+        min-h-[330px] rounded-3xl border-4 border-black bg-white p-8
+        shadow-[8px_8px_0px_rgba(0,0,0,1)]
+        transition-transform duration-200 motion-reduce:transition-none
+        hover:translate-y-[-2px] hover:shadow-[12px_12px_0px_rgba(0,0,0,1)]
+      "
     >
-      <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mb-6">
+      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100">
         <Icon size={22} className="text-purple-600" />
       </div>
 
-      <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+      <h3 className="mb-3 text-xl font-semibold">{title}</h3>
 
-      <p className="text-gray-600 text-sm leading-relaxed mb-4">
-        {service.description}
-      </p>
+      <p className="mb-4 text-sm leading-relaxed text-gray-600">{description}</p>
 
       <div className="flex flex-wrap gap-2">
-        {service.stack.map((tech: string) => (
+        {stack.map((tech) => (
           <span
             key={tech}
-            className="
-            text-xs px-3 py-1 rounded-full
-            bg-purple-100 text-purple-700
-            border border-purple-200
-          "
+            className="rounded-full border border-purple-200 bg-purple-100 px-3 py-1 text-xs text-purple-700"
           >
             {tech}
           </span>
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export function ServicesSection() {
-  const [hover, setHover] = useState<number | null>(null);
-
   return (
     <section id="services" className="py-28">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Services</h2>
+      <div className="mb-10 text-center">
+        <h2 className="mb-4 text-4xl font-bold md:text-5xl">Services</h2>
 
-        <p className="text-gray-600 max-w-xl text-xl mx-auto">
+        <p className="mx-auto max-w-xl text-xl text-gray-600">
           I help product teams ship faster with clean architecture, modern
           tooling and end-to-end delivery.
         </p>
       </div>
-      <div className="max-w-7xl mx-auto">
-        {/* row 1 */}
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {services.slice(0, 3).map((service, i) => (
-            <div
-              key={i}
-              onMouseEnter={() => setHover(i)}
-              onMouseLeave={() => setHover(null)}
-            >
-              <ServiceCard service={service} index={i} hover={hover} />
-            </div>
+
+      <div className="mx-auto max-w-7xl space-y-8 px-4">
+        <div className="grid gap-8 md:grid-cols-3">
+          {services.slice(0, 3).map((service) => (
+            <ServiceCard key={service.title} {...service} />
           ))}
         </div>
 
-        {/* row 2 */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {services.slice(3).map((service, i) => (
-            <div
-              key={i}
-              onMouseEnter={() => setHover(i + 3)}
-              onMouseLeave={() => setHover(null)}
-            >
-              <ServiceCard service={service} index={i + 3} hover={hover} />
-            </div>
+        <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+          {services.slice(3).map((service) => (
+            <ServiceCard key={service.title} {...service} />
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
