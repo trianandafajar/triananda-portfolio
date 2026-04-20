@@ -39,7 +39,7 @@ export function TestimonialSection() {
   return (
     <section
       id="testimonial"
-      className="relative overflow-hidden py-16 md:py-24"
+      className="relative overflow-hidden py-16 md:py-24 bg-white"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-purple-50/40 to-white" />
       <div className="pointer-events-none absolute -right-32 top-1/4 -z-10 h-80 w-80 rounded-full bg-purple-200/30 blur-3xl" />

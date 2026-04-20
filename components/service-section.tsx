@@ -88,10 +88,11 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden py-24"
+      className="relative overflow-hidden bg-[#f3f3f3] py-24"
     >
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-indigo-50/40 to-white" />
-      <div className="pointer-events-none absolute -left-32 top-1/3 -z-10 h-80 w-80 rounded-full bg-indigo-200/30 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-indigo-50/60 via-violet-50/40 to-purple-50/60" />
+      <div className="pointer-events-none absolute -left-32 top-1/4 -z-10 h-96 w-96 rounded-full bg-indigo-200/40 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-0 -z-10 h-96 w-96 rounded-full bg-purple-200/35 blur-3xl" />
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-14 text-center">
           <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">

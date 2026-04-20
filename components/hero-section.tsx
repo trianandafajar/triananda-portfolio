@@ -5,7 +5,7 @@ import { RotatingText } from "@/components/rotating-text"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-x-0 top-0 h-px bg-gray-200/80" />
         <div className="absolute top-20 left-8 h-24 w-24 rounded-[2rem] border border-indigo-100 bg-indigo-50/70" />

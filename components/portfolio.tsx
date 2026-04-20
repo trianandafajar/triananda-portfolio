@@ -78,9 +78,10 @@ export function PortfolioSection({ isPage = false }: PortfolioSectionProps) {
 
   return (
     <section
-      className={`bg-white ${isPage ? "pt-28 pb-16 md:pt-32 md:pb-24" : "py-16 md:py-24"}`}
+      className={`relative bg-white ${isPage ? "pt-28 pb-16 md:pt-32 md:pb-24" : "py-16 md:py-24"}`}
       id="portfolio"
     >
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.4),rgba(255,247,237,0.92),rgba(255,255,255,0.5))]" />
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-7xl">
           <div className={`mb-12 md:mb-16 ${isPage ? "mx-auto max-w-3xl text-center" : ""}`}>
@@ -104,7 +105,7 @@ export function PortfolioSection({ isPage = false }: PortfolioSectionProps) {
             {projects.map((project) => (
               <article
                 key={project.title}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:border-gray-200 hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-orange-100/80 bg-white/92 shadow-sm transition hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
                   <Image

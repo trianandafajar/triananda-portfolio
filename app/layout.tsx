@@ -80,8 +80,8 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <body className={`${onest.variable} font-sans antialiased overflow-x-hidden`}>
-        <main className="relative min-h-screen bg-white">
-          <div className="pointer-events-none fixed inset-0 -z-10 bg-dot-pattern opacity-70" />
+        <main className="relative min-h-screen bg-transparent">
+          <div className="pointer-events-none fixed inset-0 -z-10 bg-stage-pattern" />
           <Navigation />
           {children}
           <Footer />

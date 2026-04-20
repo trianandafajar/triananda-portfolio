@@ -140,6 +140,7 @@
 
 /* Subtle dotted background pattern for page */
 .bg-dot-pattern {
+  background-color: transparent;
   background-image: radial-gradient(
     circle at 1px 1px,
     rgba(15, 23, 42, 0.08) 1px,
@@ -149,10 +150,20 @@
 }
 
 .bg-grid-pattern {
+  background-color: transparent;
   background-image:
     linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
   background-size: 42px 42px;
+}
+
+.bg-stage-pattern {
+  background-color: #4b43a8;
+  background-image:
+    radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.08) 0, rgba(255, 255, 255, 0.08) 18%, transparent 18.5%),
+    radial-gradient(circle at 82% 30%, rgba(255, 255, 255, 0.07) 0, rgba(255, 255, 255, 0.07) 16%, transparent 16.5%),
+    radial-gradient(circle at 50% 82%, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 20%, transparent 20.5%),
+    linear-gradient(180deg, rgba(74, 64, 164, 0.96), rgba(68, 58, 151, 0.98));
 }
 
 @media (prefers-reduced-motion: reduce) {

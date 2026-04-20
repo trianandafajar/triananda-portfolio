@@ -23,21 +23,21 @@ export function ExperienceSection() {
     <section id="experience" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-14 max-w-3xl md:mb-20">
-          <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
+          <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white ring-1 ring-white/30 backdrop-blur">
             Experience
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-white md:text-5xl">
             Employee Experience
           </h2>
-          <p className="mt-4 text-base text-gray-600">
+          <p className="mt-4 text-base text-indigo-100/90">
             My professional journey building SaaS platforms and scalable web
             applications across multiple companies.
           </p>
         </div>
 
         <div className="relative grid gap-10 md:grid-cols-3 md:gap-8">
-          <div className="absolute bottom-0 left-[23px] top-2 w-px bg-gradient-to-b from-indigo-200 via-gray-200 to-transparent md:hidden" />
-          <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent md:block" />
+          <div className="absolute bottom-0 left-[23px] top-2 w-px bg-gradient-to-b from-white/60 via-white/30 to-transparent md:hidden" />
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-white/40 to-transparent md:block" />
 
           {experiences.map((exp, index) => (
             <div key={exp.role} className="relative pl-16 md:pl-0">
