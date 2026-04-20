@@ -30,7 +30,7 @@ const highlights = [
 export function AboutSection() {
   return (
     <section id="about" className="container mx-auto px-4 py-24 bg-white">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center md:mb-16">
           <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
             About me
