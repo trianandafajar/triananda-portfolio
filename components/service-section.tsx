@@ -3,6 +3,7 @@ import { Layers, Server, Brain, Code, Cpu } from "lucide-react"
 const services = [
   {
     icon: Layers,
+    accent: "bg-indigo-50 text-indigo-600",
     title: "SaaS Development",
     description:
       "Production-grade SaaS platforms including multi-tenant architecture, billing systems, dashboards and cloud deployment.",
@@ -10,6 +11,7 @@ const services = [
   },
   {
     icon: Server,
+    accent: "bg-emerald-50 text-emerald-600",
     title: "Multi-Tenant Systems",
     description:
       "Scalable multi-tenant systems with secure data isolation and optimized performance.",
@@ -17,6 +19,7 @@ const services = [
   },
   {
     icon: Brain,
+    accent: "bg-purple-50 text-purple-600",
     title: "AI Integration",
     description:
       "AI integrations including chatbots, automation workflows and intelligent data processing.",
@@ -24,6 +27,7 @@ const services = [
   },
   {
     icon: Code,
+    accent: "bg-sky-50 text-sky-600",
     title: "Web Development",
     description:
       "Fast and scalable web applications using modern frameworks and clean architecture.",
@@ -31,6 +35,7 @@ const services = [
   },
   {
     icon: Cpu,
+    accent: "bg-amber-50 text-amber-600",
     title: "System Architecture",
     description:
       "Backend systems optimized for scalability, performance and reliability.",
@@ -40,37 +45,36 @@ const services = [
 
 function ServiceCard({
   icon: Icon,
+  accent,
   title,
   description,
   stack,
 }: {
   icon: typeof Layers
+  accent: string
   title: string
   description: string
   stack: string[]
 }) {
   return (
-    <div
-      className="
-        min-h-[330px] rounded-3xl border-4 border-black bg-white p-8
-        shadow-[8px_8px_0px_rgba(0,0,0,1)]
-        transition-transform duration-200 motion-reduce:transition-none
-        hover:translate-y-[-2px] hover:shadow-[12px_12px_0px_rgba(0,0,0,1)]
-      "
-    >
-      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100">
-        <Icon size={22} className="text-purple-600" />
+    <div className="group relative flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-gray-200 hover:shadow-lg">
+      <div
+        className={`mb-6 flex h-12 w-12 items-center justify-center rounded-xl ${accent}`}
+      >
+        <Icon size={22} />
       </div>
 
-      <h3 className="mb-3 text-xl font-semibold">{title}</h3>
+      <h3 className="mb-3 text-xl font-semibold text-gray-900">{title}</h3>
 
-      <p className="mb-4 text-sm leading-relaxed text-gray-600">{description}</p>
+      <p className="mb-6 text-sm leading-relaxed text-gray-600">
+        {description}
+      </p>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="mt-auto flex flex-wrap gap-2">
         {stack.map((tech) => (
           <span
             key={tech}
-            className="rounded-full border border-purple-200 bg-purple-100 px-3 py-1 text-xs text-purple-700"
+            className="rounded-full bg-gray-50 px-3 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-200"
           >
             {tech}
           </span>
@@ -82,27 +86,38 @@ function ServiceCard({
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-28">
-      <div className="mb-10 text-center">
-        <h2 className="mb-4 text-4xl font-bold md:text-5xl">Services</h2>
-
-        <p className="mx-auto max-w-xl text-xl text-gray-600">
-          I help product teams ship faster with clean architecture, modern
-          tooling and end-to-end delivery.
-        </p>
-      </div>
-
-      <div className="mx-auto max-w-7xl space-y-8 px-4">
-        <div className="grid gap-8 md:grid-cols-3">
-          {services.slice(0, 3).map((service) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
+    <section
+      id="services"
+      className="relative overflow-hidden py-24"
+    >
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-indigo-50/40 to-white" />
+      <div className="pointer-events-none absolute -left-32 top-1/3 -z-10 h-80 w-80 rounded-full bg-indigo-200/30 blur-3xl" />
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="mb-14 text-center">
+          <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
+            Services
+          </span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 md:text-5xl">
+            What I can help you build
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-600">
+            I help product teams ship faster with clean architecture, modern
+            tooling and end-to-end delivery.
+          </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-          {services.slice(3).map((service) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
+        <div className="space-y-6">
+          <div className="grid gap-6 md:grid-cols-3">
+            {services.slice(0, 3).map((service) => (
+              <ServiceCard key={service.title} {...service} />
+            ))}
+          </div>
+
+          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+            {services.slice(3).map((service) => (
+              <ServiceCard key={service.title} {...service} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

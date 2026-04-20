@@ -1,5 +1,4 @@
-import { ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowUpRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -78,16 +77,21 @@ export function PortfolioSection({ isPage = false }: PortfolioSectionProps) {
   const projects = isPage ? portfolioProjects : portfolioProjects.slice(0, 6)
 
   return (
-    <section className="bg-white py-16 md:py-24" id="portfolio">
+    <section
+      className={`bg-white ${isPage ? "pt-28 pb-16 md:pt-32 md:pb-24" : "py-16 md:py-24"}`}
+      id="portfolio"
+    >
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className={`mb-12 md:mb-16 ${isPage ? "text-center" : ""}`}>
-            <h2 className="mb-6 text-3xl font-bold leading-[1.3] text-black md:mb-8 md:text-4xl lg:text-6xl">
+        <div className="mx-auto max-w-7xl">
+          <div className={`mb-12 md:mb-16 ${isPage ? "mx-auto max-w-3xl text-center" : ""}`}>
+            <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
+              Portfolio
+            </span>
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
               Featured Projects
             </h2>
-
             <p
-              className={`max-w-2xl text-base leading-relaxed text-gray-500 md:text-lg ${
+              className={`mt-4 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg ${
                 isPage ? "mx-auto" : ""
               }`}
             >
@@ -96,81 +100,64 @@ export function PortfolioSection({ isPage = false }: PortfolioSectionProps) {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
-              <div
+              <article
                 key={project.title}
-                className="
-                  group overflow-hidden rounded-3xl border-4 border-black bg-white
-                  shadow-[4px_4px_0px_rgba(0,0,0,1)]
-                  transition-transform duration-200 motion-reduce:transition-none
-                  hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_rgba(0,0,0,1)]
-                "
+                className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:border-gray-200 hover:shadow-lg"
               >
-                <div className="relative aspect-[6/3] w-full overflow-hidden bg-[#EDEDED]">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
                   <Image
                     src={project.image}
                     alt={`${project.title} preview`}
                     fill
                     loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 33vw, 360px"
-                    className="object-cover transition-transform duration-300 motion-reduce:transition-none group-hover:scale-105"
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 360px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-
-                  <div
-                    className="
-                      absolute inset-0 flex items-center justify-center bg-black/40
-                      opacity-0 transition-opacity duration-300 motion-reduce:transition-none
-                      group-hover:opacity-100
-                    "
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-md opacity-0 transition group-hover:opacity-100"
                   >
-                    <Button
-                      asChild
-                      className="rounded-lg bg-white px-6 py-3 font-semibold text-black hover:bg-gray-200"
-                    >
-                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                        View Demo
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
-                  </div>
+                    View Demo
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
                 </div>
 
-                <div className="p-6 md:p-8">
-                  <h3 className="mb-2 text-xl font-bold text-[#0B0B0B] md:text-2xl">{project.title}</h3>
-
-                  <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-[#393939] md:text-base">
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-900 md:text-xl">
+                    {project.title}
+                  </h3>
+                  <p className="mb-5 line-clamp-3 text-sm leading-relaxed text-gray-600">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="mt-auto flex flex-wrap gap-2">
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-full border border-purple-200 bg-purple-100 px-3 py-1 text-xs text-purple-700"
+                        className="rounded-full bg-gray-50 px-3 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-200"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 
           {!isPage && (
-            <div className="mt-12 flex justify-center">
+            <div className="mt-14 flex justify-center">
               <Link
                 href="/projects"
-                className="
-                  flex items-center rounded-lg border-[3px] border-black bg-white
-                  px-7 py-4 text-base font-semibold md:text-lg
-                  transition-transform duration-200 ease-out motion-reduce:transition-none
-                  hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)]
-                  active:scale-95
-                "
+                className="inline-flex items-center rounded-full bg-gray-900 px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-gray-800 hover:shadow-md md:text-lg"
               >
                 More Portfolio
+                <ArrowUpRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
           )}

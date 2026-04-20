@@ -17,7 +17,7 @@ export function StickyNavigation() {
       }
 
       frameId = window.requestAnimationFrame(() => {
-        const next = window.scrollY > 300
+        const next = window.scrollY > 200
         setVisible((prev) => (prev === next ? prev : next))
         frameId = 0
       })
@@ -36,12 +36,13 @@ export function StickyNavigation() {
 
   return (
     <nav
-      className={`fixed left-0 top-0 z-50 w-full border-b-4 border-black bg-white shadow-[0_6px_0px_0px_rgba(0,0,0,1)] ${
+      className={`fixed left-0 top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md shadow-sm ${
         reducedMotion ? "transition-none" : "transition-transform duration-200"
       } ${visible ? "translate-y-0" : "-translate-y-full pointer-events-none"}`}
       aria-hidden={!visible}
+      inert={!visible}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <NavContent compact />
       </div>
     </nav>

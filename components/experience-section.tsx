@@ -1,3 +1,5 @@
+import { Briefcase } from "lucide-react"
+
 export function ExperienceSection() {
   const experiences = [
     {
@@ -18,41 +20,44 @@ export function ExperienceSection() {
   ]
 
   return (
-    <section id="experience" className="py-16 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 md:px-0">
-        <div className="mb-12 max-w-3xl md:mb-20">
-          <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-5xl">
+    <section id="experience" className="py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="mb-14 max-w-3xl md:mb-20">
+          <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
+            Experience
+          </span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 md:text-5xl">
             Employee Experience
           </h2>
-
-          <p className="text-sm text-gray-600 md:text-base">
+          <p className="mt-4 text-base text-gray-600">
             My professional journey building SaaS platforms and scalable web
             applications across multiple companies.
           </p>
         </div>
 
-        <div className="relative grid gap-10 md:grid-cols-3 md:gap-12">
-          <div className="absolute bottom-0 left-6 top-0 w-px bg-black/20 md:hidden" />
-          <div className="absolute left-0 right-0 top-6 hidden h-px bg-black/20 md:block" />
+        <div className="relative grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="absolute bottom-0 left-[23px] top-2 w-px bg-gradient-to-b from-indigo-200 via-gray-200 to-transparent md:hidden" />
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent md:block" />
 
           {experiences.map((exp, index) => (
             <div key={exp.role} className="relative pl-16 md:pl-0">
-              <div
-                className="
-                  absolute left-0 top-0 z-10 flex h-12 w-12 items-center justify-center
-                  rounded-full border-4 border-black bg-white font-bold
-                  shadow-[4px_4px_0px_rgba(0,0,0,1)]
-                  md:static md:mb-6
-                "
-              >
-                {String(index + 1).padStart(2, "0")}
+              <div className="absolute left-0 top-0 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white ring-1 ring-gray-200 md:static md:mb-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-white shadow-sm">
+                  <Briefcase className="h-4 w-4" />
+                </div>
               </div>
 
-              <h3 className="mb-1 pt-2 text-2xl font-semibold leading-tight md:pt-0 md:text-xl">
-                {exp.role}
-              </h3>
-              <p className="font-medium text-gray-700">{exp.company}</p>
-              <p className="mt-1 text-sm text-gray-500">{exp.period}</p>
+              <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-indigo-600">
+                  {String(index + 1).padStart(2, "0")} · {exp.period}
+                </p>
+                <h3 className="mb-1 text-xl font-semibold text-gray-900">
+                  {exp.role}
+                </h3>
+                <p className="text-sm font-medium text-gray-600">
+                  {exp.company}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -32,7 +32,7 @@ export function RotatingText() {
 
   return (
     <span
-      className={`inline-block underline transition-opacity duration-200 motion-reduce:transition-none ${
+      className={`inline-block text-indigo-600 transition-opacity duration-200 motion-reduce:transition-none ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
