@@ -1,78 +1,101 @@
-import { ArrowUpRight, FolderOpen } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { RotatingText } from "@/components/rotating-text"
+import { ArrowRight, FolderOpen, Send } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+// import { RotatingText } from "@/components/rotating-text";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-white">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-x-0 top-0 h-px bg-gray-200/80" />
-        <div className="absolute top-20 left-8 h-24 w-24 rounded-[2rem] border border-indigo-100 bg-indigo-50/70" />
-        <div className="absolute right-10 bottom-16 h-20 w-20 rounded-full border border-purple-100 bg-purple-50/80" />
-      </div>
+    <section className="relative isolate overflow-hidden bg-[#f5f5f4]">
+      <div className="mx-auto mt-24 max-w-7xl pb-12 pt-4 lg:mt-28 lg:pb-16">
+        <div className="grid items-stretch gap-4 lg:grid-cols-[minmax(340px,0.86fr)_minmax(0,1.84fr)] lg:gap-5">
+          <article className="rounded-[32px] border border-[#e2e2e0] bg-[#fafaf9] p-[5px] shadow-[0_8px_30px_rgba(20,20,20,0.06)]">
+            <div className="h-full rounded-[26px] border border-[#ececea] bg-white p-3">
+              <div className="relative aspect-[1.05/1] overflow-hidden rounded-[23px] ">
+                <Image
+                  src="/images/profil_2.png"
+                  alt="Triananda profile"
+                  priority
+                  fill
+                  fetchPriority="high"
+                  sizes="(max-width: 1023px) 100vw, 34vw"
+                  className="h-full w-full object-contain object-bottom"
+                />
+              </div>
 
-      <div className="container mx-auto mt-28 px-4 py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-2">
-          <div className="order-1 flex justify-center md:order-2 md:justify-end">
-            <Image
-              src="/images/profil.png"
-              alt="Triananda profile"
-              width={425}
-              height={425}
-              priority
-              fetchPriority="high"
-              sizes="(max-width: 778px) 320px, 425px"
-              className="h-auto w-[320px] bg-white object-cover md:w-[425px]"
-            />
-          </div>
+              <div className="flex items-center justify-between gap-4 px-3 pb-2 pt-5">
+                <div className="min-w-0">
+                  <p className="truncate text-[clamp(1.25rem,2vw,1.8rem)] font-semibold leading-tight tracking-[-0.04em] text-[#171717]">
+                    Triananda Fajar R.
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-[#707070] sm:text-base">
+                    Full-Stack Developer 
+                  </p>
+                </div>
+                <Link
+                  href="https://www.upwork.com/freelancers/trianandafajar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Hire me"
+                  title="Hire me"
+                  className="group inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#ededeb] bg-white text-[#4a4a4a] transition-colors hover:border-[#171717] hover:bg-[#171717] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2"
+                >
+                  <Send className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </Link>
+              </div>
+            </div>
+          </article>
 
-          <div className="order-2 space-y-7 md:order-1">
-            <span className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500" />
-              </span>
-              Available for new projects
-            </span>
+          <div className="rounded-[32px] border border-[#e2e2e0] bg-[#fafaf9] p-[5px] shadow-[0_8px_30px_rgba(20,20,20,0.06)]">
+            <div className="flex h-full min-w-0 flex-col justify-center rounded-[26px] border border-[#ececea] bg-white px-4 py-4 md:px-8 sm:py-4">
+              <div className="space-y-2">
+                <Link
+                  href="https://www.upwork.com/freelancers/trianandafajar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex w-fit items-center gap-2.5 rounded-full border border-[#ececea] bg-white py-1.5 pl-3.5 pr-1.5 text-sm font-medium text-[#303030] transition-colors hover:border-[#dadad7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2"
+                >
+                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#45bd91]" />
+                  Available for new projects
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#ededeb] bg-[#fafaf9] text-[#303030] transition-colors group-hover:bg-[#f1f1ef]">
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:-rotate-45" />
+                  </span>
+                </Link>
 
-            <h1 className="text-[clamp(36px,5vw,56px)] font-bold leading-[1.05] tracking-tight text-gray-900">
-              I'm Triananda, a{" "}
-              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Full Stack SaaS Developer
-              </span>
-              <span className="mt-3 block text-[clamp(22px,2.8vw,30px)] font-semibold text-gray-700">
-                specializing in <RotatingText />
-              </span>
-            </h1>
+                <h1 className="max-w-[920px] text-[clamp(2.35rem,4.15vw,4rem)] font-medium leading-[1.08] tracking-[-0.045em] text-[#181818]">
+                  Hi, I'm Triananda Fajar
+                  <span className="block">
+                    {" "}
+                    I'm a{" "}
+                    <span className="text-[#463D9D]">
+                      Full-Stack Developer 
+                    </span>
+                  </span>
+                  {/* <span className="mt-4 block text-[clamp(1.5rem,2.2vw,2rem)] font-semibold leading-[1.14] tracking-[-0.040em] text-[#272727]">
+                  specializing in <RotatingText />
+                </span> */}
+                </h1>
 
-            <p className="max-w-xl text-[16px] leading-7 text-gray-600 md:text-[18px]">
-              With 5+ years of experience and 60+ completed projects for clients
-              across various countries.
-            </p>
+                <p className="max-w-2xl text-base leading-7 text-[#4b4b4b] sm:text-lg sm:leading-8">
+                  With 5+ years of experience and 60+ completed projects for
+                  clients across various countries.
+                </p>
 
-            <div className="flex flex-wrap gap-4 pt-2 sm:flex-row">
-              <Link
-                href="#portfolio"
-                className="inline-flex items-center rounded-full bg-gray-900 px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-gray-800 hover:shadow-md md:text-lg"
-              >
-                <FolderOpen className="mr-2 h-5 w-5" />
-                View portfolio
-              </Link>
-
-              <Link
-                href="https://www.upwork.com/freelancers/trianandafajar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-gray-200 bg-white px-7 py-3.5 text-base font-semibold text-gray-900 shadow-sm transition hover:border-gray-300 hover:shadow-md md:text-lg"
-              >
-                Hire me
-                <ArrowUpRight className="ml-2 h-5 w-5" />
-              </Link>
+                <div className="pt-1">
+                  <Link
+                    href="#portfolio"
+                    className="group inline-flex min-h-13 items-center gap-5 rounded-[16px] bg-[#111111] py-2 pl-6 pr-2 text-base font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.14)] transition-colors hover:bg-[#292929] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2 sm:text-lg"
+                  >
+                    View portfolio
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-[11px] border border-white/20 bg-white/[0.08]">
+                      <FolderOpen className="h-[18px] w-[18px] transition-transform group-hover:scale-105" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
