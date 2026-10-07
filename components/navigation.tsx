@@ -1,12 +1,18 @@
+"use client"
+
+import { usePathname } from "next/navigation"
 import { NavContent } from "@/components/nav-content"
 import { StickyNavigation } from "@/components/sticky-navigation"
 
 export function Navigation() {
+  // Only the home page opens with a dark hero; other pages start on white.
+  const onDark = usePathname() === "/"
+
   return (
     <>
       <nav className="absolute left-0 top-0 z-40 w-full">
         <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4">
-          <NavContent />
+          <NavContent onDark={onDark} />
         </div>
       </nav>
 

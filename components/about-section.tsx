@@ -13,7 +13,7 @@ const highlights = [
     icon: Rocket,
     accent: "from-pink-500 to-rose-500",
     tint: "bg-rose-50 text-rose-600",
-    title: "60+ completed SaaS & web projects",
+    title: "13+ completed SaaS & web projects",
     description:
       "I’ve delivered SaaS platforms, CRM systems, internal tools, and e-commerce applications for startups and growing businesses.",
   },
@@ -29,39 +29,41 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="container mx-auto px-4 py-24 bg-white">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12 text-center md:mb-16">
-          <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
-            About me
-          </span>
-          <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
-            Crafting dependable products with clean code
-          </h2>
-        </div>
+    <section id="about" className="w-full bg-white py-24">
+      <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center md:mb-16">
+            <span className="inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-indigo-100">
+              About me
+            </span>
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
+              Crafting dependable products with clean code
+            </h2>
+          </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {highlights.map(({ icon: Icon, accent, tint, title, description }) => (
-            <div
-              key={title}
-              className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-            >
+          <div className="grid gap-6 md:grid-cols-3">
+            {highlights.map(({ icon: Icon, accent, tint, title, description }) => (
               <div
-                className={`pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${accent}`}
-              />
-              <div
-                className={`mb-5 flex h-11 w-11 items-center justify-center rounded-xl ${tint}`}
+                key={title}
+                className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <Icon className="h-5 w-5" />
+                <div
+                  className={`pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${accent}`}
+                />
+                <div
+                  className={`mb-5 flex h-11 w-11 items-center justify-center rounded-xl ${tint}`}
+                >
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                  {title}
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-600">
+                  {description}
+                </p>
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-gray-900">
-                {title}
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
-                {description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

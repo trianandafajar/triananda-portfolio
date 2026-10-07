@@ -11,7 +11,7 @@ const portfolioProjects = [
     title: "CALENLY",
     description:
       "A web-based scheduling system that allows users to create, manage, and book appointments with a simple and intuitive interface.",
-    image: "/images/calenly.png",
+    image: "/images/projects/calenly.png",
     demoUrl: "https://calenly.trianandafajar.com",
     stack: ["React", "TypeScript", "Tailwind"],
   },
@@ -19,7 +19,7 @@ const portfolioProjects = [
     title: "KEYSTHETIX",
     description:
       "A modern e-commerce web application that enables users to browse products, manage carts, and complete purchases through integrated payment gateways.",
-    image: "/images/keysthetic.png",
+    image: "/images/projects/keysthetix.webp",
     demoUrl: "https://keysthetix.trianandafajar.com",
     stack: ["FastAPI", "React", "Tailwind"],
   },
@@ -27,7 +27,7 @@ const portfolioProjects = [
     title: "MENTORA",
     description:
       "A web-based learning platform designed to manage courses, users, and structured learning modules.",
-    image: "/images/mentora.png",
+    image: "/images/projects/mentora.webp",
     demoUrl: "https://mentora.trianandafajar.com",
     stack: ["NuxtJs", "Tailwind", "Flask"],
   },
@@ -35,7 +35,7 @@ const portfolioProjects = [
     title: "INVOICE GENERATOR",
     description:
       "A simple and efficient SaaS tool that allows users to generate professional invoices instantly.",
-    image: "/images/invoice-generator.png",
+    image: "/images/projects/invoice-generator.png",
     demoUrl: "https://invoice-generator.trianandafajar.com",
     stack: ["Vue.js", "Laravel", "MySQL"],
   },
@@ -43,7 +43,7 @@ const portfolioProjects = [
     title: "CONTENNA",
     description:
       "A scalable headless CMS platform that enables developers to manage and deliver content via APIs.",
-    image: "/images/contenna.png",
+    image: "/images/projects/contenna.webp",
     demoUrl: "https://contenna.trianandafajar.com",
     stack: ["NextJs", "Laravel", "MySQL"],
   },
@@ -51,16 +51,43 @@ const portfolioProjects = [
     title: "METROAPI",
     description:
       "A robust backend system designed for high-performance API handling.",
-    image: "/images/metroapp.png",
+    image: "/images/projects/metro.png",
     demoUrl: "http://io.metrorelay.com",
     stack: ["NextJs", "Laravel Octane", "Imagick"],
+  },
+  {
+    title: "FITNESSAI",
+    description:
+      "Track every workout and meal in one place, built around your body's real progress.",
+    image: "/images/projects/fitnessai.png",
+    stack: ["NextJs", "Laravel", "AI Integration"],
+  },
+  {
+    title: "EVENTBRO",
+    description:
+      "Helps people discover memorable events and gives organizers a cleaner way to publish, sell, and manage tickets.",
+    image: "/images/projects/eventbro.webp",
+    stack: ["NextJs", "Payload", "Stripe", "Supabase"],
+  },
+  {
+    title: "HEALTHDATA",
+    description:
+      "Streamline patient registration, medical records, pharmacy, and billing in one integrated healthcare management platform.",
+    image: "/images/projects/healthdata.webp",
+    stack: ["Vue.js", "NuxtJs", "PostgreSQL"],
+  },
+  {
+    title: "CHAT APP",
+    description:
+      "A simple place to chat with friends, family, and small teams, keeping every conversation clear, focused, and easy to access.",
+    image: "/images/projects/chat-app.webp",
+    stack: ["NextJs", "SaaS"],
   },
   {
     title: "DASHBOARD INVESTOR",
     description:
       "A modern dashboard interface designed to display investment data, analytics, and key metrics in a clean and structured layout.",
     image: "/images/dashboard.png",
-    demoUrl: "#",
     stack: ["NextJs", "Zustand", "Leaflet"],
   },
   {
@@ -107,25 +134,29 @@ export function PortfolioSection({ isPage = false }: PortfolioSectionProps) {
                 key={project.title}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-orange-100/80 bg-white/92 shadow-sm transition hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
               >
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
                   <Image
                     src={project.image}
                     alt={`${project.title} preview`}
                     fill
                     loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 360px"
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 400px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-md opacity-0 transition group-hover:opacity-100"
-                  >
-                    View Demo
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
+                  {project.demoUrl && (
+                    <>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-md opacity-0 transition group-hover:opacity-100"
+                      >
+                        View Demo
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </>
+                  )}
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
