@@ -10,23 +10,15 @@ const services = [
     iconClass: "text-indigo-600",
     title: "SaaS Development",
     description:
-      "Production-grade SaaS platforms including multi-tenant architecture, billing systems, dashboards and cloud deployment.",
+      "Multi-tenant SaaS platforms with tenant-level data isolation, role-based access control, subscription billing, admin dashboards and automated cloud deployments.",
     stack: ["TypeScript", "Next.js", "Node.js", "PostgreSQL"],
-  },
-  {
-    icon: Server,
-    iconClass: "text-emerald-600",
-    title: "Multi-Tenant Systems",
-    description:
-      "Scalable multi-tenant systems with secure data isolation and optimized performance.",
-    stack: ["Node.js", "Express", "PostgreSQL", "Docker"],
   },
   {
     icon: Brain,
     iconClass: "text-purple-600",
     title: "AI Integration",
     description:
-      "AI integrations including chatbots, automation workflows and intelligent data processing.",
+      "LLM-powered chatbots and automation workflows built on the OpenAI API, using structured outputs, tool calling and data-extraction pipelines.",
     stack: ["OpenAI API", "Python", "Node.js"],
   },
   {
@@ -34,7 +26,7 @@ const services = [
     iconClass: "text-sky-600",
     title: "Web Development",
     description:
-      "Fast and scalable web applications using modern frameworks and clean architecture.",
+      "Performance-focused web apps with server-side rendering, component-driven architecture, type-safe API integration and utility-first styling.",
     stack: ["React", "Next.js", "Vue", "Tailwind"],
   },
   {
@@ -42,7 +34,7 @@ const services = [
     iconClass: "text-amber-600",
     title: "System Architecture",
     description:
-      "Backend systems optimized for scalability, performance and reliability.",
+      "Backend systems designed for scale and reliability: REST API design, relational schema modeling, query optimization and containerized services on cloud infrastructure.",
     stack: ["AWS", "Docker", "PostgreSQL"],
   },
 ]
@@ -209,8 +201,9 @@ export function ServicesSection() {
             What I can help you build
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-gray-600">
-            I help product teams ship faster with clean architecture, modern
-            tooling and end-to-end delivery.
+            I help product teams ship faster with clean architecture,
+            type-safe codebases and end-to-end delivery, from schema design to
+            production deployment.
           </p>
         </div>
 

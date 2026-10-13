@@ -64,8 +64,10 @@ export function NavContent({ compact = false, onDark = false }: NavContentProps)
         href="https://www.upwork.com/freelancers/trianandafajar"
         target="_blank"
         rel="noopener noreferrer"
-        className={`rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:shadow-md md:px-6 ${
-          onDark ? "bg-[#e862a8] hover:bg-[#d9549a]" : "bg-gray-900 hover:bg-gray-800"
+        className={`rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:shadow-md md:px-6 ${
+          onDark
+            ? "bg-[#fbbf24] text-[#1e1b4b] hover:bg-[#f59e0b]"
+            : "bg-gray-900 text-white hover:bg-gray-800"
         }`}
       >
         Hire on Upwork

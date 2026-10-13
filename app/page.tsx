@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
+// import { AboutSection } from "@/components/about-section"
 import { PortfolioSection } from "@/components/portfolio"
 import { SocialProofSection } from "@/components/social-proof-section"
 import { ServicesSection } from "@/components/service-section"
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <ServicesSection />
       <PortfolioSection />
       <SocialProofSection />

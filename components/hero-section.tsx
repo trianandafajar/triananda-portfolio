@@ -8,15 +8,15 @@ const ROLES = ["a Full-Stack Developer", "an AI Developer"];
 
 export function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#2b3140] text-white">
+    <section className="relative isolate overflow-hidden text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           backgroundImage: [
-            "radial-gradient(60% 55% at 28% 12%, rgba(66,86,148,0.48), transparent 70%)",
-            "radial-gradient(45% 50% at 62% 24%, rgba(112,72,142,0.32), transparent 70%)",
-            "radial-gradient(55% 45% at 42% 95%, rgba(125,115,105,0.24), transparent 70%)",
+            "radial-gradient(60% 55% at 28% 12%, rgba(129,140,248,0.28), transparent 70%)",
+            "radial-gradient(45% 50% at 62% 24%, rgba(232,98,168,0.16), transparent 70%)",
+            "radial-gradient(55% 45% at 42% 95%, rgba(167,139,250,0.2), transparent 70%)",
           ].join(", "),
         }}
       />
@@ -27,7 +27,7 @@ export function HeroSection() {
             href={UPWORK_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e862a8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#2b3140]"
+            className="group inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fbbf24] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4b43a8]"
           >
             <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#45bd91]" />
             Available for new projects
@@ -39,7 +39,7 @@ export function HeroSection() {
             <span className="block">
               <RotatingText
                 words={ROLES}
-                className="text-[#f08cc3]"
+                className="text-[#fbbf24]"
               />
             </span>
           </h1>
@@ -53,7 +53,7 @@ export function HeroSection() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="#portfolio"
-              className="inline-flex items-center rounded-full border border-white px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e862a8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#2b3140]"
+              className="inline-flex items-center rounded-full border border-white px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fbbf24] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4b43a8]"
             >
               View portfolio
             </Link>
@@ -61,7 +61,7 @@ export function HeroSection() {
               href={UPWORK_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-[#171717] transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e862a8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#2b3140]"
+              className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-[#171717] transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fbbf24] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4b43a8]"
             >
               Hire me
             </Link>
@@ -85,8 +85,8 @@ export function HeroSection() {
             />
           </div>
 
-          <div className="absolute -left-2 bottom-[10%] z-10 inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#2b3140]/85 px-4 py-2.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur sm:-left-6">
-            <Sparkles className="h-4 w-4 text-[#f08cc3]" aria-hidden />
+          <div className="absolute -left-2 bottom-[10%] z-10 inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#4b43a8]/85 px-4 py-2.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur sm:-left-6">
+            <Sparkles className="h-4 w-4 text-[#fbbf24]" aria-hidden />
             AI-Powered Solutions
           </div>
         </div>
