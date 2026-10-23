@@ -19,7 +19,7 @@ const portfolioProjects = [
     title: "MERIDIAN",
     description:
       "A modern corporate energy website built with WordPress, featuring flexible layouts, customizable content, and easy content management.",
-    image: "/images/projects/meridian.png?v=2",
+    image: "/images/projects/meridian_1.png?v=5",
     demoUrl: "https://meridian.yanafriyoko.com/",
     stack: ["WordPress", "Elementor", "ACF"],
   },
