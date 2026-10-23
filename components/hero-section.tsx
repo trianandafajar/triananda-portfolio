@@ -46,8 +46,7 @@ export function HeroSection() {
 
           <p className="max-w-lg text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
             With 5+ years of experience and 13+ completed projects for clients
-            across various countries. I specialize in scalable SaaS and
-            AI-powered web apps.
+            across various countries. I specialize in scalable SaaS, AI-powered web apps, and custom WordPress development.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">

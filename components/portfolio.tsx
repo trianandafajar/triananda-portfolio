@@ -16,6 +16,14 @@ const portfolioProjects = [
     stack: ["React", "TypeScript", "Tailwind"],
   },
   {
+    title: "MERIDIAN",
+    description:
+      "A modern corporate energy website built with WordPress, featuring flexible layouts, customizable content, and easy content management.",
+    image: "/images/projects/meridian.png",
+    demoUrl: "https://meridian.yanafriyoko.com/",
+    stack: ["WordPress", "Elementor", "ACF"],
+  },
+  {
     title: "KEYSTHETIX",
     description:
       "A modern e-commerce web application that enables users to browse products, manage carts, and complete purchases through integrated payment gateways.",

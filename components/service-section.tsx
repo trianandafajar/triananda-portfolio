@@ -6,6 +6,14 @@ import { cn } from "@/lib/utils"
 
 const services = [
   {
+    icon: Cpu,
+    iconClass: "text-amber-600",
+    title: "System Architecture",
+    description:
+      "Backend systems designed for scale and reliability: REST API design, relational schema modeling, query optimization and containerized services on cloud infrastructure.",
+    stack: ["AWS", "Docker", "PostgreSQL"],
+  },
+  {
     icon: Layers,
     iconClass: "text-indigo-600",
     title: "SaaS Development",
@@ -29,14 +37,6 @@ const services = [
       "Performance-focused web apps with server-side rendering, component-driven architecture, type-safe API integration and utility-first styling.",
     stack: ["React", "Next.js", "Vue", "Tailwind"],
   },
-  {
-    icon: Cpu,
-    iconClass: "text-amber-600",
-    title: "System Architecture",
-    description:
-      "Backend systems designed for scale and reliability: REST API design, relational schema modeling, query optimization and containerized services on cloud infrastructure.",
-    stack: ["AWS", "Docker", "PostgreSQL"],
-  },
 ]
 
 const EASE = "ease-[cubic-bezier(0.22,1,0.36,1)]"
@@ -45,7 +45,7 @@ function ServiceAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <div className="flex flex-col gap-3 lg:flex-row">
+    <div className="flex flex-col gap-3 lg:min-h-[22rem] lg:flex-row">
       {services.map((service, index) => {
         const open = openIndex === index
         const Icon = service.icon
@@ -55,7 +55,7 @@ function ServiceAccordion() {
         return (
           <div
             key={service.title}
-            onClick={() => setOpenIndex(open ? null : index)}
+            onClick={() => setOpenIndex(index)}
             className={cn(
               "relative min-w-0 cursor-pointer overflow-hidden rounded-3xl transition-[flex-grow,background-color,box-shadow] duration-500 motion-reduce:transition-none lg:flex-[1_1_0%]",
               EASE,
@@ -160,7 +160,7 @@ function ServiceAccordion() {
                       : "translate-y-2 opacity-0"
                   )}
                 >
-                  <p className="text-sm leading-relaxed text-slate-600 sm:text-[15px]">
+                  <p className="min-h-[7.5rem] text-sm leading-relaxed text-slate-600 sm:min-h-[6rem] sm:text-[15px] lg:min-h-0">
                     {service.description}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
