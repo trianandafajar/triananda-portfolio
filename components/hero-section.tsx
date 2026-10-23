@@ -4,7 +4,7 @@ import Link from "next/link";
 import { RotatingText } from "@/components/rotating-text";
 
 const UPWORK_URL = "https://www.upwork.com/freelancers/trianandafajar";
-const ROLES = ["a Full-Stack Developer", "an AI Developer"];
+const ROLES = ["a Full-Stack Developer", "an AI Developer", "a WordPress Developer"];
 
 export function HeroSection() {
   return (

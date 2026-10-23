@@ -8,20 +8,28 @@ interface PortfolioSectionProps {
 
 const portfolioProjects = [
   {
+    title: "WESTWOOD",
+    description:
+      "A responsive WordPress real estate website featuring property listings, smart filtering, valuation requests, and flexible content management.",
+    image: "/images/projects/westwood.png?v=2",
+    demoUrl: "https://westwood.yanafriyoko.com/",
+    stack: ["WordPress", "Elementor", "Responsive"],
+  },
+  {
+    title: "MERIDIAN",
+    description:
+      "A modern corporate energy website built with WordPress, featuring flexible layouts, customizable content, and easy content management.",
+    image: "/images/projects/meridian.png?v=2",
+    demoUrl: "https://meridian.yanafriyoko.com/",
+    stack: ["WordPress", "Elementor", "ACF"],
+  },
+  {
     title: "CALENLY",
     description:
       "A web-based scheduling system that allows users to create, manage, and book appointments with a simple and intuitive interface.",
     image: "/images/projects/calenly.png",
     demoUrl: "https://calenly.trianandafajar.com",
     stack: ["React", "TypeScript", "Tailwind"],
-  },
-  {
-    title: "MERIDIAN",
-    description:
-      "A modern corporate energy website built with WordPress, featuring flexible layouts, customizable content, and easy content management.",
-    image: "/images/projects/meridian.png",
-    demoUrl: "https://meridian.yanafriyoko.com/",
-    stack: ["WordPress", "Elementor", "ACF"],
   },
   {
     title: "KEYSTHETIX",
