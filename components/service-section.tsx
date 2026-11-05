@@ -1,17 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import { Layers, Server, Brain, Code, Cpu, ChevronDown } from "lucide-react"
+import { Layers, Server, Brain, Code, Cpu, Palette, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const services = [
   {
-    icon: Cpu,
-    iconClass: "text-amber-600",
-    title: "System Architecture",
+    icon: Palette,
+    iconClass: "text-rose-600",
+    title: "WordPress Developer",
     description:
-      "Backend systems designed for scale and reliability: REST API design, relational schema modeling, query optimization and containerized services on cloud infrastructure.",
-    stack: ["AWS", "Docker", "PostgreSQL"],
+      "Custom WordPress websites built with Elementor: responsive layouts, reusable templates, custom fields and a CMS setup that non-technical teams can manage on their own.",
+    stack: ["WordPress", "Elementor"],
   },
   {
     icon: Layers,
@@ -37,6 +37,14 @@ const services = [
       "Performance-focused web apps with server-side rendering, component-driven architecture, type-safe API integration and utility-first styling.",
     stack: ["React", "Next.js", "Vue", "Tailwind"],
   },
+  {
+    icon: Cpu,
+    iconClass: "text-amber-600",
+    title: "System Architecture",
+    description:
+      "Backend systems designed for scale and reliability: REST API design, relational schema modeling, query optimization and containerized services on cloud infrastructure.",
+    stack: ["AWS", "Docker", "PostgreSQL"],
+  },
 ]
 
 const EASE = "ease-[cubic-bezier(0.22,1,0.36,1)]"
@@ -60,7 +68,7 @@ function ServiceAccordion() {
               "relative min-w-0 cursor-pointer overflow-hidden rounded-3xl transition-[flex-grow,background-color,box-shadow] duration-500 motion-reduce:transition-none lg:flex-[1_1_0%]",
               EASE,
               open
-                ? "z-10 bg-white shadow-[0_24px_70px_-12px_rgba(124,58,237,0.28)] ring-1 ring-[#ebe6f8] lg:flex-[2.8_1_0%]"
+                ? "z-10 bg-white shadow-[0_24px_70px_-12px_rgba(124,58,237,0.28)] ring-1 ring-[#ebe6f8] lg:flex-[2.4_1_0%]"
                 : "bg-[#ede8f9] hover:bg-[#e6def8]"
             )}
           >
@@ -119,12 +127,12 @@ function ServiceAccordion() {
                 id={buttonId}
                 aria-expanded={open}
                 aria-controls={panelId}
-                className="flex w-full items-center gap-4 rounded-3xl p-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#7c3aed] sm:p-6 lg:flex-col lg:items-start lg:gap-5"
+                className="flex w-full items-center gap-4 rounded-3xl p-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#7c3aed] sm:p-6 lg:flex-col lg:items-start lg:gap-5 lg:p-5 xl:p-6"
               >
                 <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#ece6fb] shadow-sm ring-1 ring-white/80 lg:h-16 lg:w-16">
                   <Icon className={cn("h-7 w-7", service.iconClass)} aria-hidden />
                 </span>
-                <span className="break-words text-xl font-semibold leading-snug text-slate-800 lg:text-lg">
+                <span className="break-words text-xl font-semibold leading-snug text-slate-800 lg:text-base xl:text-lg">
                   {service.title}
                 </span>
                 <ChevronDown
@@ -153,7 +161,7 @@ function ServiceAccordion() {
                 <div
                   inert={!open}
                   className={cn(
-                    "px-5 pb-5 transition-[opacity,translate] duration-500 motion-reduce:transition-none sm:px-6 sm:pb-6 lg:min-w-[17rem]",
+                    "px-5 pb-5 transition-[opacity,translate] duration-500 motion-reduce:transition-none sm:px-6 sm:pb-6 lg:min-w-[17rem] lg:px-5 lg:pb-5 xl:px-6 xl:pb-6",
                     EASE,
                     open
                       ? "translate-y-0 opacity-100 delay-150"

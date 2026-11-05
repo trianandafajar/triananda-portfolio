@@ -12,7 +12,7 @@ const portfolioProjects = [
     description:
       "A responsive WordPress real estate website featuring property listings, smart filtering, valuation requests, and flexible content management.",
     image: "/images/projects/westwood.png?v=2",
-    demoUrl: "https://westwood.yanafriyoko.com/",
+    demoUrl: "https://westwood.trianandafajar.com/",
     stack: ["WordPress", "Elementor", "Responsive"],
   },
   {
@@ -20,7 +20,7 @@ const portfolioProjects = [
     description:
       "A modern corporate energy website built with WordPress, featuring flexible layouts, customizable content, and easy content management.",
     image: "/images/projects/meridian_1.png?v=5",
-    demoUrl: "https://meridian.yanafriyoko.com/",
+    demoUrl: "https://meridian.trianandafajar.com/",
     stack: ["WordPress", "Elementor", "ACF"],
   },
   {

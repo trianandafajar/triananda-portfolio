@@ -17,7 +17,7 @@ const stats: Stat[] = [
     suffix: "+",
     label: "Jobs completed on Upwork",
     description:
-      "Delivered SaaS, AI-powered, and full-stack projects with consistently positive client feedback.",
+      "Delivered SaaS, AI-powered, full-stack, and WordPress projects with consistently positive client feedback.",
     cardClass: "col-span-2 bg-[#ede8f8] md:col-span-4",
     valueClass: "text-[#7c3aed]",
     illustration: true,
@@ -113,7 +113,9 @@ export function SocialProofSection() {
             <h2 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-slate-800 md:text-4xl">
               Trusted results across{" "}
               <span className="text-indigo-600">
-                AI-powered SaaS and full-stack delivery.
+                AI-powered SaaS,{" "}
+                <span className="whitespace-nowrap">full-stack</span> and
+                WordPress delivery.
               </span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-slate-500 md:text-lg">
