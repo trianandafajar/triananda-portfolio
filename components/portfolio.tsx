@@ -11,7 +11,7 @@ const portfolioProjects = [
     title: "WESTWOOD",
     description:
       "A responsive WordPress real estate website featuring property listings, smart filtering, valuation requests, and flexible content management.",
-    image: "/images/projects/westwood.png?v=2",
+    image: "/images/scren/west-wood.webp",
     demoUrl: "https://westwood.trianandafajar.com/",
     stack: ["WordPress", "Elementor", "Responsive"],
   },
@@ -19,7 +19,7 @@ const portfolioProjects = [
     title: "MERIDIAN",
     description:
       "A modern corporate energy website built with WordPress, featuring flexible layouts, customizable content, and easy content management.",
-    image: "/images/projects/meridian_1.png?v=5",
+    image: "/images/scren/meridian.webp",
     demoUrl: "https://meridian.trianandafajar.com/",
     stack: ["WordPress", "Elementor", "ACF"],
   },
@@ -27,7 +27,7 @@ const portfolioProjects = [
     title: "CALENLY",
     description:
       "A web-based scheduling system that allows users to create, manage, and book appointments with a simple and intuitive interface.",
-    image: "/images/projects/calenly.png",
+    image: "/images/scren/calenly.webp",
     demoUrl: "https://calenly.trianandafajar.com",
     stack: ["React", "TypeScript", "Tailwind"],
   },
@@ -35,7 +35,7 @@ const portfolioProjects = [
     title: "KEYSTHETIX",
     description:
       "A modern e-commerce web application that enables users to browse products, manage carts, and complete purchases through integrated payment gateways.",
-    image: "/images/projects/keysthetix.webp",
+    image: "/images/scren/keysthetix.webp",
     demoUrl: "https://keysthetix.trianandafajar.com",
     stack: ["FastAPI", "React", "Tailwind"],
   },
@@ -43,7 +43,7 @@ const portfolioProjects = [
     title: "MENTORA",
     description:
       "A web-based learning platform designed to manage courses, users, and structured learning modules.",
-    image: "/images/projects/mentora.webp",
+    image: "/images/scren/mentora.webp",
     demoUrl: "https://mentora.trianandafajar.com",
     stack: ["NuxtJs", "Tailwind", "Flask"],
   },
@@ -51,7 +51,7 @@ const portfolioProjects = [
     title: "INVOICE GENERATOR",
     description:
       "A simple and efficient SaaS tool that allows users to generate professional invoices instantly.",
-    image: "/images/projects/invoice-generator.png",
+    image: "/images/scren/invoice-generator.webp",
     demoUrl: "https://invoice-generator.trianandafajar.com",
     stack: ["Vue.js", "Laravel", "MySQL"],
   },
@@ -59,7 +59,7 @@ const portfolioProjects = [
     title: "CONTENNA",
     description:
       "A scalable headless CMS platform that enables developers to manage and deliver content via APIs.",
-    image: "/images/projects/contenna.webp",
+    image: "/images/scren/contenna.webp",
     demoUrl: "https://contenna.trianandafajar.com",
     stack: ["NextJs", "Laravel", "MySQL"],
   },
@@ -75,28 +75,32 @@ const portfolioProjects = [
     title: "FITNESSAI",
     description:
       "Track every workout and meal in one place, built around your body's real progress.",
-    image: "/images/projects/fitnessai.png",
+    image: "/images/scren/fitnessai.webp",
+    demoUrl: "https://fitnessai.trianandafajar.com",
     stack: ["NextJs", "Laravel", "AI Integration"],
   },
   {
     title: "EVENTBRO",
     description:
       "Helps people discover memorable events and gives organizers a cleaner way to publish, sell, and manage tickets.",
-    image: "/images/projects/eventbro.webp",
+    image: "/images/scren/eventbro.webp",
+    demoUrl: "https://eventbro.trianandafajar.com",
     stack: ["NextJs", "Payload", "Stripe", "Supabase"],
   },
   {
     title: "HEALTHDATA",
     description:
       "Streamline patient registration, medical records, pharmacy, and billing in one integrated healthcare management platform.",
-    image: "/images/projects/healthdata.webp",
+    image: "/images/scren/healthcare.webp",
+    demoUrl: "https://healthcare.trianandafajar.com",
     stack: ["Vue.js", "NuxtJs", "PostgreSQL"],
   },
   {
     title: "CHAT APP",
     description:
       "A simple place to chat with friends, family, and small teams, keeping every conversation clear, focused, and easy to access.",
-    image: "/images/projects/chat-app.webp",
+    image: "/images/scren/chat-app.webp",
+    demoUrl: "https://chat-app.trianandafajar.com",
     stack: ["NextJs", "SaaS"],
   },
   {
